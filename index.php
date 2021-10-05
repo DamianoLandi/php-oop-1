@@ -18,13 +18,20 @@ class Movie{
     }
 };
 
-$new_movie = new Movie('Avatar', '2009', 'Mario Rossi', '4h');
+$movie = new Movie('Avatar', '2009', 'Mario Rossi', '4h');
 
-echo $new_movie->title . "</br>";
-echo $new_movie->year . "</br>";
-echo $new_movie->director . "</br>";
-echo $new_movie->length . "</br>";
-echo $new_movie->sequel(2);
+$new_movie = new Movie('Godzilla', '1960', 'Luigi Verdi', '3.5h');
+
+$movies = [$movie, $new_movie];
+
+foreach($movies as $movie){
+    echo $movie->title . "</br>";
+    echo $movie->year . "</br>";
+    echo $movie->director . "</br>";
+    echo $movie->length . "</br>";
+    echo $movie->sequel(2) . "</br> </br>";
+}
+
 
 
 ?>
