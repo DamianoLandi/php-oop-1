@@ -14,6 +14,12 @@ class Movie{
     }
 };
 
+$new_movie = new Movie('Avatar', '2009', 'Mario Rossi', '4h');
+
+echo $new_movie->title . "</br>";
+echo $new_movie->year . "</br>";
+echo $new_movie->director . "</br>";
+echo $new_movie->length;
 
 
 
