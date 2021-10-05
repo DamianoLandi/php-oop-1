@@ -6,6 +6,10 @@ class Movie{
     public $director;
     public $length;
 
+    public function sequel($num){
+        return "$this->title $num";
+    }
+
     public function __construct($_title, $_year, $_director, $_length){
         $this->title = $_title;
         $this->year = $_year;
@@ -19,8 +23,8 @@ $new_movie = new Movie('Avatar', '2009', 'Mario Rossi', '4h');
 echo $new_movie->title . "</br>";
 echo $new_movie->year . "</br>";
 echo $new_movie->director . "</br>";
-echo $new_movie->length;
-
+echo $new_movie->length . "</br>";
+echo $new_movie->sequel(2);
 
 
 ?>
